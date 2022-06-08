@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>age calculater</title>
+</head>
+
+<body>
+    <h1>Age Calculater Using Javascript</h1>
+    <hr>
+    <div class="container">
+        <form>
+            <table>
+                <tr>
+                    <td>
+                        <select name="day" id="day">
+                            <option value="" selected disabled>Day</option>
+                            <script>                                   
+                                for (let i = 1; i <= 31; i++) {
+                                    document.write("<option value='"+i+"'>" + i + "</option>");
+                                }
+                            </script>
+                        </select>
+                    </td>
+                    <td>
+                        <select name="month" id="month">
+                            <option value="" selected disabled>month</option>
+                            <script>
+                                for (let i = 1; i <= 12; i++) {
+                                    document.write("<option value='"+i+"'>" + i + "</option>");
+                                }
+                            </script>
+                        </select>
+                    </td>
+                    <td>
+                        <select name="year" id="year">
+                            <option value="" selected disabled>year</option>
+                            <script>
+                                let optyear = new Date();
+    
+                                for (let i = 1900; i <= optyear.getFullYear(); i++) {
+                                    document.write("<option value='"+i+"'>" + i + "</option>");
+                                }
+                            </script>
+                        </select>
+                    </td>
+                    <td>
+                        <button type="button" class="btn">Calculate</button>
+                        <input type="reset" class="reset">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="bkg">
+                        <p>day</p>
+                        <span id="sday">-</span>
+                    </td>
+                    <td class="bkg">
+                        <p>month</p>
+                        <span id="smonth">-</span>
+                    </td>
+                    <td class="bkg">
+                        <p>year</p>
+                        <span id="syear">-</span>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+
+
+
+
+    <script src="./age_calculate.js"></script>
+</body>
+
+</html>
